@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chromatic — A random color studio for designers. Generate colors, gradients, and build palettes." />
+  <title>Chromatic — Random Color Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ===== HEADER ===== -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo">CHROMATIC<span class="logo-dot">●</span></div>
+        <span class="tagline">Color Studio</span>
+      </div>
+      <span class="kbd-hint" aria-label="Press Space to generate">Space ↻</span>
+    </header>
+
+    <!-- ===== HERO SWATCH ===== -->
+    <section class="swatch-section">
+      <div class="swatch-frame">
+        <div class="swatch" id="swatch">
+
+          <!-- top-left: contrast badge -->
+          <div class="contrast-badge" id="contrastBadge">Aa</div>
+
+          <!-- top-right: format switcher -->
+          <div class="format-switcher">
+            <button class="fmt-btn active" data-fmt="hex">HEX</button>
+            <button class="fmt-btn" data-fmt="rgb">RGB</button>
+            <button class="fmt-btn" data-fmt="hsl">HSL</button>
+          </div>
+
+          <!-- bottom: color values -->
+          <div class="color-value-display">
+            <div class="color-big-value" id="colorBigValue">#3A86FF</div>
+            <div class="color-sub-values">
+              <span id="subVal1">rgb(58, 134, 255)</span>
+              <span class="sep">·</span>
+              <span id="subVal2">hsl(217, 100%, 61%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="swatch-ticks" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="copy-row">
+        <button class="copy-btn" id="copyBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+          <span id="copyLabel">Copy HEX</span>
+        </button>
+        <span class="copy-toast" id="copyToast">✓ Copied!</span>
+      </div>
+    </section>
+
+    <!-- ===== GENERATE BUTTON ===== -->
+    <div class="generate-wrap">
+      <button class="generate-btn" id="generateBtn">
+        <span class="btn-label">Generate Color</span>
+        <span class="btn-icon" aria-hidden="true">↻</span>
+      </button>
+    </div>
+
+    <!-- ===== TWO-COL: gradient panel + color history (side-by-side on ≥768px) ===== -->
+    <div class="two-col">
+
+      <!-- GRADIENT GENERATOR -->
+      <section class="panel gradient-panel">
+        <div class="panel-header">
+          <h2 class="panel-title">Gradient Studio</h2>
+          <div class="gradient-controls">
+            <select class="grad-select" id="gradType">
+              <option value="linear-gradient(135deg">↗ Linear</option>
+              <option value="linear-gradient(90deg">→ Horiz</option>
+              <option value="linear-gradient(180deg">↓ Vert</option>
+              <option value="radial-gradient(circle">◎ Radial</option>
+            </select>
+            <button class="icon-btn" id="lockColor1Btn" title="Lock color 1">🔓</button>
+            <button class="icon-btn" id="swapGradBtn"   title="Swap colors">⇄</button>
+            <button class="icon-btn" id="lockColor2Btn" title="Lock color 2">🔓</button>
+          </div>
+        </div>
+
+        <!-- Prominent generate gradient button -->
+        <button class="generate-grad-btn" id="refreshGradBtn">
+          <span class="btn-label">Generate Gradient</span>
+          <span class="btn-icon" aria-hidden="true">↻</span>
+        </button>
+
+        <div class="gradient-swatch" id="gradientSwatch"></div>
+
+        <div class="gradient-stops">
+          <div class="stop-chip" id="stop1Chip" title="Click to set as main color">
+            <span class="stop-dot" id="stop1Dot"></span>
+            <span id="stop1Val">#3A86FF</span>
+          </div>
+          <div class="stop-chip" id="stop2Chip" title="Click to set as main color">
+            <span class="stop-dot" id="stop2Dot"></span>
+            <span id="stop2Val">#FF006E</span>
+          </div>
+        </div>
+
+        <div class="gradient-css-row">
+          <code class="grad-css-code" id="gradCSS">background: linear-gradient(135deg, #3A86FF, #FF006E);</code>
+          <button class="copy-btn small" id="copyGradBtn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            Copy
+          </button>
+        </div>
+
+        <button class="save-grad-btn" id="saveGradBtn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          Save to Gradient History
+        </button>
+      </section>
+
+      <!-- COLOR HISTORY -->
+      <section class="panel history-panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            Color History
+            <span class="history-count" id="historyCount">0</span>
+          </h2>
+          <button class="small-btn danger" id="clearHistoryBtn">Clear</button>
+        </div>
+        <div class="history-grid" id="historyGrid">
+          <p class="history-empty" id="historyEmpty">Generate colors to build your palette</p>
+        </div>
+      </section>
+
+    </div><!-- /two-col -->
+
+    <!-- ===== GRADIENT HISTORY ===== -->
+    <section class="panel gradient-history-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">
+          Gradient History
+          <span class="history-count" id="gradHistoryCount">0</span>
+        </h2>
+        <button class="small-btn danger" id="clearGradHistoryBtn">Clear</button>
+      </div>
+      <div class="grad-history-grid" id="gradHistoryGrid">
+        <p class="history-empty" id="gradHistoryEmpty">Save gradients to build your collection</p>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      Built by Rajeev Gaddam · Chromatic Color Studio
+    </footer>
+
+  </div><!-- /app -->
+
+  <script src="script.js"></script>
+</body>
+</html>
