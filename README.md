@@ -27,15 +27,6 @@ chromatic-color-studio/
 └── README.md    — This file
 ```
 
-## 🖥️ Hosting on GitHub Pages
-
-1. Create a new GitHub repository (e.g. `chromatic-color-studio`)
-2. Upload all files: `index.html`, `style.css`, `script.js`, `README.md`
-3. Go to **Settings → Pages**
-4. Under **Source**, select **Deploy from a branch → main → / (root)**
-5. Click **Save** — your site will be live at:
-   `https://<your-username>.github.io/<repo-name>/`
-
 ## ⌨️ Keyboard Shortcut
 
 | Key       | Action               |
