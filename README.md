@@ -17,14 +17,18 @@ A responsive, dark-themed color tool for designers. Generate random colors, buil
 - **Color History** — tracks the last 30 generated colors as a clickable palette
 - **Fully Responsive** — optimized for phones (320px+), tablets, laptops, and desktops
 
+
 ## 📁 File Structure
 
 ```
-chromatic-color-studio/
-├── index.html   — HTML structure
-├── style.css    — All styles with fluid responsive breakpoints
-├── script.js    — Vanilla JS logic (no dependencies)
-└── README.md    — This file
+color-generator/
+├── index.html         # HTML structure
+├── style.css          # All styles with fluid responsive breakpoints
+├── script.js          # Vanilla JS logic (no dependencies)
+├── README.md          # Project documentation
+├── CODE_OF_CONDUCT.md # Contributor Covenant Code of Conduct
+├── LICENSE            # MIT License
+└── SECURITY.md        # Security policy and reporting
 ```
 
 ## ⌨️ Keyboard Shortcut
