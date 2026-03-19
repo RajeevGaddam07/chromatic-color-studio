@@ -4,7 +4,7 @@ A responsive, dark-themed color tool for designers. Generate random colors, buil
 
 ## 🚀 Live Demo
 
-> Deploy to GitHub Pages and paste your URL here.
+> https://rajeevgaddam07.github.io/chromatic-color-studio/
 
 ## ✨ Features
 
