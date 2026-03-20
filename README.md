@@ -45,14 +45,16 @@ You can install Chromatic Color Studio directly in Visual Studio Code using the 
 ## 📁 File Structure
 
 ```
-color-generator/
-├── index.html         # HTML structure
-├── style.css          # All styles
-├── script.js          # Vanilla JS logic (no dependencies)
-├── README.md          # Project documentation
-├── CODE_OF_CONDUCT.md # Contributor Covenant Code of Conduct
-├── LICENSE            # MIT License
-└── SECURITY.md        # Security policy and reporting
+chromatic-color-studio/
+├── docs/
+│ ├── index.html # Main HTML file (web version)
+│ ├── style.css # Styling
+│ └── script.js # JavaScript logic
+├── CODE_OF_CONDUCT.md # Community guidelines
+├── LICENSE # MIT License
+├── README.md # Project documentation
+├── SECURITY.md # Security policy
+├── chromatic-color-studio-1.0.0.vsix # VS Code extension package
 ```
 
 ---
