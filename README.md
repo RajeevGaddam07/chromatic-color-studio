@@ -17,7 +17,7 @@ You can install Chromatic Color Studio directly in Visual Studio Code using the 
 ### 📥 Steps to Install
 
 1. Download Extension
-[![Download VSIX](https://img.shields.io/badge/Download-VSIX-blue?style=for-the-badge&logo=visualstudiocode)](https://github.com/rajeevgaddam07/chromatic-color-studio/chromatic-color-studio-1.0.0.vsix) 
+[⬇️ Download VSIX](https://github.com/rajeevgaddam07/chromatic-color-studio/releases/download/v1.0.0/chromatic-color-studio-1.0.0.vsix) 
 2. Open **Visual Studio Code**  
 3. Go to the **Extensions** panel (`Ctrl + Shift + X`)  
 4. Click on the `⋯` (three dots) in the top-right corner  
