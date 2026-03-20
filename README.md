@@ -55,7 +55,6 @@ chromatic-color-studio/
 ├── LICENSE # MIT License
 ├── README.md # Project documentation
 ├── SECURITY.md # Security policy
-├── chromatic-color-studio-1.0.0.vsix # VS Code extension package
 ```
 
 ---
