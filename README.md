@@ -1,7 +1,6 @@
-
 # 🎨 Chromatic — Random Color Studio
 
-A responsive, dark-themed color tool for designers. Generate random colors, build gradients, and save your palette — all in the browser with zero dependencies.
+A responsive, dark-themed color tool for designers. Generate random colors, build gradients, and save your palette — all in the browser and now available as a Visual Studio Code extension.
 
 ---
 
@@ -11,16 +10,35 @@ A responsive, dark-themed color tool for designers. Generate random colors, buil
 
 ---
 
+## 🧩 VS Code Extension (Manual Install)
+
+You can install Chromatic Color Studio directly in Visual Studio Code using the `.vsix` file.
+
+### 📥 Steps to Install
+
+1. Download the latest `.vsix` file from the **Releases** section of this repository  
+2. Open **Visual Studio Code**  
+3. Go to the **Extensions** panel (`Ctrl + Shift + X`)  
+4. Click on the `⋯` (three dots) in the top-right corner  
+5. Select **Install from VSIX...**  
+6. Choose the downloaded `.vsix` file  
+7. Reload VS Code if prompted  
+
+✅ The extension will now be installed and ready to use
+
+---
+
 ## ✨ Features
 
 - 🎲 **Random Color Generator** — generates a new color on every click (or press `Space`)
 - 🔄 **HEX / RGB / HSL switcher** — switch between formats instantly
 - 🌓 **Auto-contrast text** — uses WCAG luminance to automatically show black or white text over the swatch
 - 📋 **Copy to clipboard** — copy the current color value with one click
-- 🎨 **Gradient Studio** — combine two colors into a gradient with 4 types (linear ↗ → ↓ and radial), lock/unlock stops, and swap colors
-- 🕘 **Gradient History** — save your favorite gradients; click any saved tile to reload it into the studio
-- 🖌️ **Color History** — tracks the last 30 generated colors as a clickable palette
-- 📱 **Fully Responsive** — optimized for phones, tablets, laptops, and desktops
+- 🎨 **Gradient Studio** — combine two colors into a gradient with multiple styles
+- 🕘 **Gradient History** — save and reuse gradients
+- 🖌️ **Color History** — tracks recently generated colors
+- 📱 **Fully Responsive UI**
+- 🧩 **VS Code Integration** — use color tools directly inside your editor
 
 ---
 
@@ -47,10 +65,21 @@ color-generator/
 
 ---
 
-## 🚀 Quick Start
 
-1. Clone or download this repository.
-2. Open `index.html` in your browser — no build step required.
+## 🚀 Quick Start (Web Version)
+
+1. Clone or download this repository  
+2. Open `index.html` in your browser  
+
+---
+
+## 🧪 Using in VS Code
+
+After installing the extension:
+
+- Open Command Palette (`Ctrl + Shift + P`)
+- Search: **Chromatic: Open Color Studio**
+- Start generating colors inside your editor 🚀
 
 ---
 
